@@ -3,7 +3,7 @@
 ## Important note
 
 
-Notice that this repo is a preliminary work before our [Wav2Pix](https://github.com/imatge-upc/wav2pix) ICASSP 2019. You would probably want to check that other repo, as it is more mature and stable than this one.
+Notice that this repo is a preliminary work before our [Wav2Pix](https://imatge-upc.github.io/wav2pix/) paper in ICASSP 2019. You probably want to check that other repo instead, as it is more mature and stable than this one.
 
 ## Introduction
 
