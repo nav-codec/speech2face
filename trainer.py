@@ -15,7 +15,7 @@ class Trainer(object):
     def __init__(self, type, dataset, split, lr, lr_lower_boundary, lr_update_type, lr_update_step, diter, vis_screen, save_path, l1_coef, l2_coef, pre_trained_gen,
                  pre_trained_disc, batch_size, num_workers, epochs, h, scale_size, num_channels, k, lambda_k, gamma, project, concat):
         with open('config.yaml', 'r') as f:
-            config = yaml.load(f)
+            config = yaml.load(f, Loader=yaml.FullLoader)
 
         self.generator = gan_factory.generator_factory(type, dataset, batch_size, h, scale_size, num_channels).cuda()
         self.discriminator = gan_factory.discriminator_factory(type, batch_size, h, scale_size, num_channels).cuda()
