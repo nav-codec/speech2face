@@ -1,7 +1,7 @@
 import os
 import io
 from torch.utils.data import Dataset, DataLoader
-import cPickle as pickle
+import pickle
 import numpy as np
 import pdb
 from PIL import Image
