@@ -58,7 +58,7 @@ class OneHot2YoutubersDataset(Dataset):
                 .replace('&', '').replace(';', '').replace('!', '').replace(',', '').replace('$', '').replace('?', '')
 
         cropped_face = Image.open(filter(lambda x: x in printable, format_path).replace('.jpg', '.png'))
-        if self.split is not 3:
+        if self.split != 3:
             audio_path = format_path.replace("video", "audio").replace("cropped_frames", "frames").replace('.jpg', '.wav').replace('.png', '.wav')\
                 .replace('cropped_face_frame', format_path.split('/')[7].replace('_cropped_frames', '') + '_preprocessed_frame')
             fm, wav_data = wavfile.read(filter(lambda x: x in printable, audio_path).replace('youtubers_audios_audios', 'youtubers_videos_audios').replace('.png', '.wav'))
