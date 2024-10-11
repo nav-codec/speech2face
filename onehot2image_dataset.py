@@ -22,7 +22,7 @@ class OneHot2YoutubersDataset(Dataset):
 
     def __init__(self, dataset_path, transform=None, split=None):
         with open('config.yaml', 'r') as f:
-            config = yaml.load(f)
+            config = yaml.load(f, Loader=yaml.FullLoader)
         self.transform = transform
         self.dataset = None
         #self.youtubers = [youtuber for youtuber in os.listdir(dataset_path)
